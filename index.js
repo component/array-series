@@ -1,11 +1,11 @@
 module.exports = function series(fns, context, callback) {
-  if (!callback && typeof context === 'function') {
-    callback = context
-    context = null
-  }
-
   if (!callback) {
-    callback = noop
+    if (typeof context === 'function') {
+      callback = context
+      context = null
+    } else {
+      callback = noop
+    }
   }
 
   var length = fns.length
