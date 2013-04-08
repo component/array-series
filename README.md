@@ -4,6 +4,8 @@ Call an array of asynchronous functions in series
 
 ### API
 
+#### series(fns[, context[, callback]])
+
 ```js
 var series = require('array-series')
 
@@ -15,8 +17,6 @@ series([
 
 })
 ```
-
-#### series(fns[, context[, callback]])
 
 #### fns
 
