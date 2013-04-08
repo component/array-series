@@ -24,22 +24,22 @@ series([
 The argument signature should be:
 
 ```js
-function (callback) {
-  callback(new Error())
+function (done) {
+  done(new Error())
   // or
-  callback()
+  done()
 }
 ```
 
-That is, each function should only take a `callback` as an argument.
+That is, each function should only take a `done` as an argument.
 Each callback should only take an optional `Error` as an argument.
 
 #### context
 
 Optional context to pass to each `fn`.
-Basically `fn.call(context, callback)`.
+Basically `fn.call(context, done)`.
 
-#### callback
+#### callback(err)
 
 ```js
 function (err) {
