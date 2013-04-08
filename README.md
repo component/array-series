@@ -6,6 +6,14 @@ Call an array of asynchronous functions in series
 
 ```js
 var series = require('array-series')
+
+series([
+  function (done) {
+    done()
+  }
+], this, function (err) {
+
+})
 ```
 
 #### series(fns[, context[, callback]])
