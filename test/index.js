@@ -1,2 +1,0 @@
-require('./success')
-require('./error')

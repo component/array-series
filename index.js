@@ -9,6 +9,8 @@ module.exports = function series(fns, context, callback) {
   }
 
   var length = fns.length
+  if (!length) return callback();
+
   var index = 0
 
   var call = context ? function () {
