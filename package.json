@@ -1,7 +1,7 @@
 {
   "name": "array-series",
   "description": "Call an array of asynchronous functions in series",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "test": "node test"
   }

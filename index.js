@@ -8,23 +8,27 @@ module.exports = function series(fns, context, callback) {
     }
   }
 
-  var length = fns.length
+  var length = fns && fns.length
   if (!length) return callback();
 
-  var index = 0
+  fns = fns.slice(0)
 
-  var call = context ? function () {
-    fns[index].call(context, next)
-  } : function () {
-    fns[index](next)
+  var call = context
+  ? function () {
+    fns.length
+      ? fns.shift().call(context, next)
+      : callback()
+  }
+  : function () {
+    fns.length
+      ? fns.shift()(next)
+      : callback()
   }
 
   call()
 
   function next(err) {
-    if (err || ++index === length) return callback(err);
-
-    call()
+    err ? callback(err) : call()
   }
 }
 

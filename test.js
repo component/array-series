@@ -84,3 +84,5 @@ series([
   assert.equal(d, 0)
   assert.equal(o, undefined)
 })
+
+console.log('Array series tests pass!')
