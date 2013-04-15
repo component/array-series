@@ -8,8 +8,7 @@ module.exports = function series(fns, context, callback) {
     }
   }
 
-  var length = fns && fns.length
-  if (!length) return callback();
+  if (!(fns && fns.length)) return callback();
 
   fns = fns.slice(0)
 
