@@ -1,7 +1,7 @@
 {
   "name": "array-series",
   "description": "Call an array of asynchronous functions in series",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "scripts": {
     "test": "node test"
   },
@@ -13,10 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jonathanong/array-series.git"
+    "url": "https://github.com/component/array-series.git"
   },
   "bugs": {
-    "url": "https://github.com/jonathanong/array-series/issues",
+    "url": "https://github.com/component/array-series/issues",
     "email": "me@jongleberry.com"
   },
   "license": "MIT"
